@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wedding Websites with WhatsApp RSVP</title>
+<meta name="description" content="Beautiful wedding websites for Indian weddings: every event, venue directions, dress codes, travel info and RSVP on WhatsApp. Ready in 48 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Great+Vibes&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="../config.js"></script>
+<style>
+:root{--bg:#fff8f0;--card:#fff;--ink:#3b1f1a;--muted:#7a5a52;--primary:#8b1e3f;--gold:#c9a24a;--line:#ecdcc9;--teal:#0f766e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Jost,system-ui,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;line-height:1.15;margin:0 0 .4em}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:5}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:"Great Vibes",cursive;font-size:1.9rem;color:var(--primary)}
+.btn{display:inline-block;background:var(--primary);color:#fff;padding:12px 22px;border-radius:99px;text-decoration:none;font-weight:600}
+.btn.gold{background:var(--gold);color:#2a1a0a}
+.btn.ghost{background:transparent;border:2px solid var(--primary);color:var(--primary)}
+.btn.small{padding:8px 16px;font-size:.9rem}
+.hero{padding:60px 0 40px;text-align:center}
+.hero h1{font-size:clamp(2.4rem,6vw,4rem);color:var(--primary)}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:620px;margin:0 auto 24px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.phones{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:760px;margin:40px auto 0}
+.phone{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:10px;box-shadow:0 18px 40px rgba(60,20,20,.12);transition:transform .2s}
+.phone:hover{transform:translateY(-4px)}
+.screen{border-radius:20px;overflow:hidden}
+.screen .top{padding:34px 16px 26px;text-align:center;color:#fff6e6}
+.screen .top .n{font-family:"Great Vibes",cursive;font-size:2.4rem;line-height:1.1}
+.screen .top .d{font-size:.85rem;letter-spacing:.08em;opacity:.9}
+.screen .rows{padding:14px;background:#fff}
+.screen .rows div{border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin-bottom:8px;font-size:.85rem;text-align:left}
+.royal .top{background:radial-gradient(ellipse at top,#8b1e3f,#5a0f26)}
+.coastal .top{background:radial-gradient(ellipse at top,#0f766e,#0b4f4a)}
+.phone .lbl{text-align:center;font-weight:600;padding:10px 0 4px;color:var(--primary)}
+section{padding:56px 0}
+.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.title{text-align:center;margin-bottom:28px}
+.title h2{font-size:clamp(2rem,4.5vw,2.7rem);color:var(--primary)}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.f{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:20px}
+.f .i{font-size:1.7rem}
+.f h3{font-size:1.35rem;margin-top:6px}
+.f p{color:var(--muted);margin:0;font-size:.95rem}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.p{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column}
+.p.best{border:2px solid var(--primary);position:relative}
+.p.best:after{content:"Most loved";position:absolute;top:-12px;right:18px;background:var(--primary);color:#fff;font-size:.75rem;padding:2px 10px;border-radius:99px}
+.amt{font-family:"Cormorant Garamond",serif;font-size:2.3rem;font-weight:700}
+.p ul{padding-left:18px;color:var(--muted);flex:1}
+.how{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.how div{padding-top:46px;position:relative}
+.how div:before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:36px;height:36px;border-radius:50%;background:var(--gold);display:grid;place-items:center;font-weight:700}
+.partner{background:linear-gradient(135deg,#5a0f26,#8b1e3f);color:#fff6e6;border-radius:22px;padding:34px;text-align:center}
+.partner h2{color:#fff6e6}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:0 auto 10px;max-width:760px}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--muted)}
+footer{text-align:center;padding:30px;color:var(--muted);font-size:.9rem}
+.wa{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;border-radius:99px;padding:12px 18px;font-weight:600;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+@media (max-width:820px){.feat,.prices,.how{grid-template-columns:1fr}.phones{grid-template-columns:1fr;max-width:320px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <span class="logo" data-c="weddingBrand"></span>
+  <a class="btn small" data-wa="Hi! I'd like a wedding website. Our wedding is on ">WhatsApp</a>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+  <h1>One link for your whole wedding.</h1>
+  <p>Every event, venue directions, dress codes, hotel & travel info, and <strong>RSVPs straight to your WhatsApp</strong>. Guests stop calling to ask "what time is the sangeet?" Ready in 48 hours.</p>
+  <div class="cta">
+    <a class="btn" data-wa="Hi! I'd like a wedding website. Our wedding is on ">Get yours in 48 hours</a>
+    <a class="btn ghost" href="#demos">See live demos</a>
+  </div>
+
+  <div class="phones" id="demos">
+    <a class="phone" href="demo-royal/">
+      <div class="screen royal"><div class="top"><div class="n">Aanya & Vihaan</div><div class="d">12–14 FEB · UDAIPUR</div></div>
+      <div class="rows"><div>🌼 Haldi · Fri 10 am</div><div>🎶 Sangeet · Sat 7:30 pm</div><div>🐎 Baraat & Pheras · Sun 5 pm</div></div></div>
+      <div class="lbl">Royal theme → open demo</div>
+    </a>
+    <a class="phone" href="demo-coastal/">
+      <div class="screen coastal"><div class="top"><div class="n">Meera & Karthik</div><div class="d">22–24 JAN · ALLEPPEY</div></div>
+      <div class="rows"><div>🛶 Welcome Lunch · Fri 1 pm</div><div>🎉 Sangeet · Sat 7 pm</div><div>🪔 Muhurtham · Sun 9:30 am</div></div></div>
+      <div class="lbl">Coastal theme → open demo</div>
+    </a>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <div class="title"><h2>Everything guests ask, answered</h2></div>
+  <div class="feat">
+    <div class="f"><div class="i">📅</div><h3>All your events</h3><p>Haldi to reception, with times, venues, notes and one-tap "Add to calendar".</p></div>
+    <div class="f"><div class="i">📍</div><h3>Directions</h3><p>Every venue opens straight in Google Maps. No more lost uncles.</p></div>
+    <div class="f"><div class="i">👗</div><h3>Dress codes</h3><p>A colour and style guide for each function, so the photos look stunning.</p></div>
+    <div class="f"><div class="i">💌</div><h3>WhatsApp RSVP</h3><p>Guests choose events, meals and arrival details, and the RSVP lands on your WhatsApp.</p></div>
+    <div class="f"><div class="i">✈️</div><h3>Travel & stay</h3><p>Airport, pickups, hotel check-in, weather and what to pack, in one place.</p></div>
+    <div class="f"><div class="i">⏳</div><h3>Countdown & story</h3><p>Your love story and a live countdown, with no app and no login.</p></div>
+  </div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <div class="title"><h2>Simple pricing</h2><p style="color:var(--muted)">50% to start · 50% when it goes live</p></div>
+  <div class="prices">
+    <div class="p"><h3>Website</h3><div class="amt">₹3,999</div>
+      <ul><li>All events, maps, dress codes</li><li>WhatsApp RSVP form</li><li>Travel & stay, FAQ, countdown</li><li>Free link (your own domain optional)</li><li>Ready in 48 hours</li></ul>
+      <a class="btn ghost" data-wa="Hi! I'm interested in the ₹3,999 wedding website.">Choose</a></div>
+    <div class="p best"><h3>Website + RSVP Desk</h3><div class="amt">₹7,999</div>
+      <ul><li>Everything in Website</li><li>We collect and track every RSVP for you</li><li>Live guest sheet: meal counts, arrivals, rooms</li><li>Reminder messages to guests</li></ul>
+      <a class="btn" data-wa="Hi! I'm interested in the Website + RSVP Desk package.">Choose</a></div>
+    <div class="p"><h3>Destination Concierge</h3><div class="amt">₹14,999+</div>
+      <ul><li>Everything in RSVP Desk</li><li>Guest WhatsApp helpdesk during the wedding week</li><li>Room allotment & pickup schedule</li></ul>
+      <a class="btn ghost" data-wa="Hi! I'd like to know about the Destination Concierge package.">Ask us</a></div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <div class="title"><h2>How it works</h2></div>
+  <div class="how">
+    <div><h3>Tell us</h3><p>Send event details on WhatsApp, or a voice note.</p></div>
+    <div><h3>We design</h3><p>Your first version arrives within 48 hours.</p></div>
+    <div><h3>You approve</h3><p>Ask for changes until it's perfect.</p></div>
+    <div><h3>Share one link</h3><p>Put it in your invite and on WhatsApp. Done.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="partner">
+    <h2>Wedding planners, photographers & card designers</h2>
+    <p>Offer wedding websites to your clients under your own brand, or earn 20% on every couple you refer.</p>
+    <a class="btn gold" data-wa="Hi! I'm a wedding professional and I'd like to partner with you.">Partner with us</a>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <div class="title"><h2>Questions</h2></div>
+  <details><summary>We already have a video invite. Do we need this?</summary><p>They work together. Add the website link at the end of your video invite so guests get maps, timings and RSVP in one tap.</p></details>
+  <details><summary>Will older relatives manage?</summary><p>Yes. It opens like any link on WhatsApp, with no app or login. "Directions" opens Google Maps and RSVP opens WhatsApp.</p></details>
+  <details><summary>Can we keep guest details private?</summary><p>Yes. We never show guest names publicly, and we can leave sensitive details (like room numbers) out of the public page.</p></details>
+  <details><summary>Can we use our own domain like aanyawedsvihaan.com?</summary><p>Yes. You buy the domain in your own name (usually under ₹1,000 a year) and we connect it for free.</p></details>
+</div></section>
+</main>
+
+<footer><span data-c="weddingBrand"></span> · Wedding websites from <span data-c="city"></span> for weddings anywhere</footer>
+<a class="wa" data-wa="Hi! I'd like a wedding website. Our wedding is on ">💬 WhatsApp</a>
+
+<script>
+document.querySelectorAll('[data-c]').forEach(el => el.textContent = CONFIG[el.dataset.c]);
+document.querySelectorAll('[data-wa]').forEach(el => {
+  el.href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(el.dataset.wa);
+  el.target = '_blank'; el.rel = 'noopener';
+});
+document.title = CONFIG.weddingBrand + ' | Wedding websites with WhatsApp RSVP';
+</script>
+</body>
+</html>

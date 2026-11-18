@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parent Safety Checklist</title>
+<meta name="description" content="A free checklist to keep your elderly parents in India safe from phone, UPI and KYC scams.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1f2a24;--muted:#5d6b63;--brand:#1f6f54;--line:#e7e1d6;--bg:#fbf8f3;--warn:#fff4e0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55}
+.page{max-width:780px;margin:24px auto;background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px 28px}
+h1{font-family:Fraunces,serif;color:var(--brand);margin:0 0 4px;font-size:1.9rem}
+h2{font-family:Fraunces,serif;font-size:1.2rem;margin:26px 0 8px;border-bottom:2px solid var(--line);padding-bottom:4px}
+.sub{color:var(--muted);margin:0 0 10px}
+ul{list-style:none;padding:0;margin:0}
+li{padding:7px 0 7px 32px;position:relative;border-bottom:1px dashed var(--line)}
+li:before{content:"";position:absolute;left:4px;top:10px;width:16px;height:16px;border:2px solid var(--brand);border-radius:4px}
+.box{background:var(--warn);border-radius:10px;padding:14px 16px;margin-top:10px}
+.big{font-size:1.15rem;font-weight:600}
+.foot{margin-top:24px;color:var(--muted);font-size:.9rem;text-align:center}
+.print{display:inline-block;margin:0 auto 12px;background:var(--brand);color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600;cursor:pointer;border:0;font:inherit}
+@media print{body{background:#fff}.page{border:0;margin:0;padding:0}.print{display:none}}
+@media (max-width:600px){.page{margin:0;border-radius:0;padding:22px 16px}}
+</style>
+</head>
+<body>
+<div class="page">
+  <button class="print" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  <h1>Parent Safety Checklist</h1>
+  <p class="sub">For NRIs with elderly parents in India. Go through it together on your next video call, which takes about 20 minutes.</p>
+
+  <h2>📱 Phone</h2>
+  <ul>
+    <li>Screen lock is on (PIN or fingerprint), and they know it but nobody else does</li>
+    <li>Phone and apps are updated</li>
+    <li>Spam call filter is on (in the phone's call settings)</li>
+    <li>Apps are installed only from the Play Store / App Store, and "install unknown apps" is switched off</li>
+    <li>No screen-sharing or "remote support" apps (AnyDesk, TeamViewer and similar) unless you put them there</li>
+    <li>Emergency contacts are saved on the lock screen / emergency SOS is set up</li>
+  </ul>
+
+  <h2>💸 UPI & Banking</h2>
+  <ul>
+    <li>A daily UPI limit is set to a sensible amount in their UPI app</li>
+    <li>They know: <strong>you never need a PIN to RECEIVE money</strong></li>
+    <li>SMS and email alerts for every transaction are on, and you get a copy too if possible</li>
+    <li>They know the bank will <strong>never</strong> ask for an OTP, PIN or CVV on a call</li>
+    <li>The bank's real customer-care number is saved under the name "BANK – REAL"</li>
+    <li>They know how to block their card or UPI quickly, and the number is written down</li>
+  </ul>
+
+  <h2>💬 WhatsApp</h2>
+  <ul>
+    <li>Two-step verification is on (Settings → Account)</li>
+    <li>Calls from unknown numbers are silenced (Settings → Privacy → Calls)</li>
+    <li>Only contacts can add them to groups</li>
+    <li>Profile photo is visible to contacts only</li>
+  </ul>
+
+  <h2>⚠️ The 6 scams to explain to them</h2>
+  <ul>
+    <li><strong>"Your KYC has expired"</strong> SMS or call with a link → never click it, call the bank yourself</li>
+    <li><strong>"Digital arrest"</strong>: a video call from fake police/CBI/customs → real police never arrest anyone on video calls. Hang up.</li>
+    <li><strong>"Courier has illegal items in your name"</strong> → hang up</li>
+    <li><strong>"Your son/daughter is in trouble, send money now"</strong> → hang up and call your child directly</li>
+    <li><strong>"Electricity will be cut tonight, call this number"</strong> → check with the official electricity board</li>
+    <li><strong>"You've won a prize / refund, share the OTP"</strong> → never share an OTP</li>
+  </ul>
+
+  <div class="box">
+    <p class="big">The one rule for them: "If someone on the phone makes me scared or rushes me, I hang up and call my child."</p>
+    <p>If money is lost, call the national cyber-crime helpline <strong>1930</strong> immediately and report at <strong>cybercrime.gov.in</strong>. Speed matters.</p>
+  </div>
+
+  <h2>🏠 Home & health</h2>
+  <ul>
+    <li>Medicines list with doses is written down and kept on the fridge</li>
+    <li>Doctor, pharmacy and hospital numbers are on the same sheet</li>
+    <li>A trusted neighbour has your number and theirs</li>
+    <li>Health insurance policy number and TPA helpline are written down</li>
+    <li>Pension life certificate due date is known</li>
+  </ul>
+
+  <p class="foot">Want someone trusted to do all of this in person and check in every week?<br>
+  <strong id="cb">SaathCare</strong>, parent care for NRIs in <span id="cc"></span> · <a id="cw" href="index.html">WhatsApp us</a> · <a href="index.html">Website</a></p>
+</div>
+<script src="config.js"></script>
+<script>
+document.getElementById('cb').textContent = CONFIG.brand;
+document.getElementById('cc').textContent = CONFIG.city;
+document.getElementById('cw').href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent('Hi, I saw the Parent Safety Checklist. I would like a free safety check for my parents in ' + CONFIG.city + '.');
+</script>
+</body>
+</html>

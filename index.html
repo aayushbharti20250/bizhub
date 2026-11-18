@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parent Care for NRIs | Trusted help for your parents in India</title>
+<meta name="description" content="Living abroad? We help your parents in India with phones, UPI and scam safety, bills, doctor visits, bank and pension work, and send you a weekly WhatsApp update.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Your details live in config.js -->
+<script src="config.js"></script>
+<style>
+:root{
+  --bg:#fbf8f3; --card:#ffffff; --ink:#1f2a24; --muted:#5d6b63;
+  --brand:#1f6f54; --brand-ink:#ffffff; --accent:#e8a33d; --line:#e7e1d6; --soft:#eef5f1;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.2;margin:0 0 .5em}
+a{color:var(--brand)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(251,248,243,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:Fraunces,serif;font-weight:700;font-size:1.3rem;color:var(--brand)}
+.btn{display:inline-block;background:var(--brand);color:var(--brand-ink);padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:600}
+.btn.ghost{background:transparent;color:var(--brand);border:2px solid var(--brand)}
+.btn.small{padding:8px 14px;font-size:.9rem}
+.hero{padding:56px 0 40px}
+.hero .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2rem,5vw,3.1rem)}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:36ch}
+.pill{display:inline-block;background:var(--soft);color:var(--brand);padding:4px 12px;border-radius:99px;font-size:.85rem;font-weight:600;margin-bottom:14px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.report{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.report .top{font-size:.8rem;color:var(--muted);margin-bottom:10px}
+.report ul{padding-left:0;list-style:none;margin:0}
+.report li{padding:8px 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+.report li:last-child{border:0}
+section{padding:48px 0}
+.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.alt .card{background:var(--bg)}
+.card .ico{font-size:1.6rem}
+.card h3{font-size:1.1rem;margin-top:8px}
+.card p{color:var(--muted);margin:0;font-size:.95rem}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{position:relative;padding-top:44px}
+.step:before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#1f2a24;font-weight:700;display:grid;place-items:center}
+.price{display:flex;flex-direction:column}
+.price.featured{border:2px solid var(--brand);position:relative}
+.price.featured:after{content:"Most chosen";position:absolute;top:-12px;right:16px;background:var(--brand);color:#fff;font-size:.75rem;padding:2px 10px;border-radius:99px}
+.amt{font-family:Fraunces,serif;font-size:2rem;font-weight:700}
+.amt small{font-family:Inter;font-size:.9rem;color:var(--muted);font-weight:400}
+.price ul{padding-left:18px;color:var(--muted);font-size:.95rem;flex:1}
+.promise{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.promise div{background:var(--soft);border-radius:12px;padding:14px 16px;font-size:.95rem}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+footer{padding:30px 0;color:var(--muted);font-size:.9rem;text-align:center}
+.wa-float{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;border-radius:99px;padding:12px 18px;font-weight:600;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.2);z-index:20}
+@media (max-width:820px){
+  .hero .grid,.cards,.steps,.promise{grid-template-columns:1fr}
+  .hero{padding-top:32px}
+}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <span class="logo" data-c="brand">SaathCare</span>
+  <a class="btn small" data-wa="Hi, I'd like to know more about parent care in [city].">WhatsApp us</a>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap grid">
+  <div>
+    <span class="pill">For NRIs with parents in <span data-c="city"></span></span>
+    <h1>You're far away. Someone trusted is right there for them.</h1>
+    <p class="lead">We help your parents with phones, UPI and scam safety, bills, doctor visits, bank and pension work, and send <strong>you</strong> a clear update every week on WhatsApp.</p>
+    <div class="cta-row">
+      <a class="btn" data-wa="Hi, I'd like a free 20-minute safety check call for my parents in [city].">Book a free safety check</a>
+      <a class="btn ghost" href="checklist.html">Free safety checklist</a>
+    </div>
+  </div>
+  <div class="report" aria-label="Sample weekly report">
+    <div class="top">📋 Sample weekly update · Sunday</div>
+    <ul>
+      <li>✅ Visited Amma & Appa Tue + Fri, both well</li>
+      <li>💊 BP medicines refilled, next refill on 12th</li>
+      <li>🩺 Cardiology follow-up booked for Thu, 11:00, I'll go with them</li>
+      <li>⚡ Electricity bill paid, receipt attached</li>
+      <li>🛡️ Blocked 2 scam calls, Appa now knows the "KYC expired" trick</li>
+      <li>📸 3 photos attached</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <h2>What we take care of</h2>
+  <div class="cards">
+    <div class="card"><div class="ico">🛡️</div><h3>Scam & phone safety</h3><p>We set up their phone safely, block spam, set UPI limits and teach them the common scams like fake KYC, "digital arrest" and courier calls.</p></div>
+    <div class="card"><div class="ico">🩺</div><h3>Doctor visits</h3><p>We book appointments, go with them, take notes and send you the summary and prescriptions.</p></div>
+    <div class="card"><div class="ico">💊</div><h3>Medicines</h3><p>We track refills so they never run out and remind them to take them.</p></div>
+    <div class="card"><div class="ico">🏦</div><h3>Bank, pension & KYC</h3><p>Life certificates, KYC updates, branch visits. We guide them; they sign and type their own PINs.</p></div>
+    <div class="card"><div class="ico">🧾</div><h3>Bills & home</h3><p>Electricity, gas, property tax, society dues, and finding a trusted plumber or electrician.</p></div>
+    <div class="card"><div class="ico">📱</div><h3>Tech help</h3><p>Video calls, WhatsApp, online orders, government apps, explained patiently in <span data-c="languages"></span>.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step"><h3>Free call</h3><p>A 20-minute video call with you and your parents.</p></div>
+    <div class="step"><h3>Safety setup</h3><p>We visit and set up their phone and home safely.</p></div>
+    <div class="step"><h3>Regular visits</h3><p>We visit on a schedule and they can WhatsApp us any time.</p></div>
+    <div class="step"><h3>Weekly report</h3><p>Every Sunday you get photos and a clear summary.</p></div>
+  </div>
+</div></section>
+
+<section class="alt" id="pricing"><div class="wrap">
+  <h2>Simple plans</h2>
+  <div class="cards">
+    <div class="card price"><h3>Digital Safety Setup</h3><div class="amt">₹1,500 <small>/ $20 one-time</small></div>
+      <ul><li>One home visit</li><li>Phone, UPI and WhatsApp safety setup</li><li>Scam awareness session in their language</li><li>Emergency contacts set up</li></ul>
+      <a class="btn ghost" data-wa="Hi, I'd like the Digital Safety Setup for my parents.">Choose</a></div>
+    <div class="card price"><h3>Basic Care</h3><div class="amt">₹2,500 <small>/ $30 per month</small></div>
+      <ul><li>2 home visits a month</li><li>Unlimited WhatsApp tech help for parents</li><li>Bill payments</li><li>Weekly WhatsApp report to you</li></ul>
+      <a class="btn ghost" data-wa="Hi, I'm interested in the Basic Care plan.">Choose</a></div>
+    <div class="card price featured"><h3>Full Care</h3><div class="amt">₹5,000 <small>/ $60 per month</small></div>
+      <ul><li>4 home visits a month</li><li>Doctor booking + 1 accompanied visit</li><li>Medicine refill tracking</li><li>Bank, pension and KYC errands</li><li>Everything in Basic</li></ul>
+      <a class="btn" data-wa="Hi, I'm interested in the Full Care plan.">Choose</a></div>
+  </div>
+  <p style="color:var(--muted);font-size:.9rem;margin-top:14px">Serving <span data-c="areas"></span>. Travel costs are charged at actual cost. Pay by UPI, PayPal or Wise.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Our promise to your family</h2>
+  <div class="promise">
+    <div>🔒 We <strong>never</strong> ask for or keep passwords, OTPs, PINs or cards. Your parents type their own.</div>
+    <div>📝 We visit only with written consent from both you and your parents.</div>
+    <div>📒 Every visit is logged and shared with you.</div>
+    <div>🩺 We are not a medical service. We book and accompany; doctors advise.</div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <h2>Questions</h2>
+  <details><summary>Who will visit my parents?</summary><p>Me, <span data-c="ownerName"></span>, personally. I'll do a video call with you first so you know exactly who's coming. Your parents can always call you during a visit.</p></details>
+  <details><summary>What if my parents need something urgently?</summary><p>They can WhatsApp or call me. In an emergency, call 112 or an ambulance first, then me. I'll coordinate and keep you updated.</p></details>
+  <details><summary>Can I cancel any time?</summary><p>Yes. Plans are month to month with no lock-in.</p></details>
+  <details><summary>Do you handle money for my parents?</summary><p>No. We guide them while they pay with their own phone or card. We never handle their cash, cards or passwords.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <strong data-c="brand"></strong> · Parent care in <span data-c="city"></span><span id="mailWrap"> · <a data-c-href="email"></a></span>
+</div></footer>
+
+<a class="wa-float" data-wa="Hi, I'd like to know more about parent care in [city].">💬 WhatsApp</a>
+
+<script>
+document.querySelectorAll('[data-c]').forEach(el => el.textContent = CONFIG[el.dataset.c]);
+document.querySelectorAll('[data-c-href]').forEach(el => { el.textContent = CONFIG.email; el.href = 'mailto:' + CONFIG.email; });
+if (!CONFIG.email) document.getElementById('mailWrap').remove();
+document.querySelectorAll('[data-wa]').forEach(el => {
+  const msg = el.dataset.wa.replace('[city]', CONFIG.city);
+  el.href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(msg);
+  el.target = '_blank'; el.rel = 'noopener';
+});
+document.title = CONFIG.brand + ' | Parent care for NRIs in ' + CONFIG.city;
+</script>
+</body>
+</html>
