@@ -90,7 +90,8 @@ li:before{content:"";position:absolute;left:4px;top:10px;width:16px;height:16px;
 <script>
 document.getElementById('cb').textContent = CONFIG.brand;
 document.getElementById('cc').textContent = CONFIG.city;
-document.getElementById('cw').href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent('Hi, I saw the Parent Safety Checklist. I would like a free safety check for my parents in ' + CONFIG.city + '.');
+if (!CONFIG.hasWhatsapp) document.getElementById('cw').href = 'index.html';
+else document.getElementById('cw').href ='https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent('Hi, I saw the Parent Safety Checklist. I would like a free safety check for my parents in ' + CONFIG.city + '.');
 </script>
 </body>
 </html>

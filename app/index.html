@@ -205,9 +205,9 @@ const views = {
     const activeNri = S.nri.filter(c=>c.active!=="no");
     const isSun = new Date().getDay()===0;
     $("hSub").textContent = new Date().toLocaleDateString("en-IN",{weekday:"long",day:"numeric",month:"short"});
-    const needsSetup = !C.whatsapp || /^9?1?0+$/.test(C.whatsapp);
+    const needsSetup = !C.hasWhatsapp || !C.upi;
     return `
-      ${needsSetup?`<div class="card" style="border-color:var(--warn)"><b>⚙️ Add your details first</b><div class="small muted">Open <b>config.js</b> in the website folder and add your name, city, WhatsApp and UPI. Every page and template uses them.</div></div>`:""}
+      ${needsSetup?`<div class="card" style="border-color:var(--warn)"><b>⚙️ 2 details left</b><div class="small muted">Brand names and website text are done. Add your <b>WhatsApp number</b> and <b>UPI ID</b> in <b>config.js</b>. Until then, the website contact buttons show "opening soon".</div></div>`:""}
       <div class="card"><div class="row"><b>This month</b><span class="small muted">goal ${inr(goal)}</span></div>
         <div style="font-size:1.8rem;font-weight:700">${inr(paid)}</div>
         <div class="bar"><i style="width:${Math.min(100,paid/goal*100)}%"></i></div></div>
@@ -324,7 +324,7 @@ ${lines(vs.map(v=>v.safety))||"• All good, no suspicious calls or messages rep
 📅 Coming up
 ${lines(vs.map(v=>v.next))||"• —"}
 ${vs.some(v=>v.ask)?`\n❓ Need your OK on\n${lines(vs.map(v=>v.ask))}\n`:""}
-— ${C.ownerName||""}, ${C.brand}`;
+— ${C.ownerName && !C.ownerName.includes(C.brand) ? C.ownerName+", " : ""}${C.brand}`;
   openDlg(`<h3>Weekly report: ${esc(c.childName)}</h3><p class="small muted">Built from the last 7 days of visits. Edit, then send with photos.</p>
     <textarea id="rep" rows="14">${esc(text)}</textarea>
     <div class="btns">${c.childPhone?`<a class="btn wa" id="repGo" target="_blank" rel="noopener">Send on WhatsApp</a>`:""}<button class="btn ghost" id="repCopy">Copy</button><button class="btn ghost" data-close>Close</button></div>`);

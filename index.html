@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Parent Care for NRIs | Trusted help for your parents in India</title>
 <meta name="description" content="Living abroad? We help your parents in India with phones, UPI and scam safety, bills, doctor visits, bank and pension work, and send you a weekly WhatsApp update.">
+<link rel="icon" href="logo-saathcare.svg" type="image/svg+xml">
+<meta property="og:title" content="SaathCare | Far from home, never far from care">
+<meta property="og:description" content="Trusted help for your parents in India: scam safety, doctor visits, bills, bank and pension work, and a weekly WhatsApp update for you.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <!-- Your details live in config.js -->
@@ -68,7 +72,7 @@ footer{padding:30px 0;color:var(--muted);font-size:.9rem;text-align:center}
 <body>
 
 <header><div class="wrap">
-  <span class="logo" data-c="brand">SaathCare</span>
+  <span class="logo" style="display:flex;align-items:center;gap:8px"><img src="logo-saathcare.svg" alt="" width="30" height="30"><span data-c="brand">SaathCare</span></span>
   <a class="btn small" data-wa="Hi, I'd like to know more about parent care in [city].">WhatsApp us</a>
 </div></header>
 
@@ -76,7 +80,7 @@ footer{padding:30px 0;color:var(--muted);font-size:.9rem;text-align:center}
 <section class="hero"><div class="wrap grid">
   <div>
     <span class="pill">For NRIs with parents in <span data-c="city"></span></span>
-    <h1>You're far away. Someone trusted is right there for them.</h1>
+    <h1 data-c="tagline">Far from home, never far from care.</h1>
     <p class="lead">We help your parents with phones, UPI and scam safety, bills, doctor visits, bank and pension work, and send <strong>you</strong> a clear update every week on WhatsApp.</p>
     <div class="cta-row">
       <a class="btn" data-wa="Hi, I'd like a free 20-minute safety check call for my parents in [city].">Book a free safety check</a>
@@ -94,6 +98,12 @@ footer{padding:30px 0;color:var(--muted);font-size:.9rem;text-align:center}
       <li>📸 3 photos attached</li>
     </ul>
   </div>
+</div></section>
+
+<section><div class="wrap" style="max-width:760px">
+  <h2>Why we started</h2>
+  <p style="font-size:1.08rem">Every NRI knows the feeling: a missed call from home, a message that says "nothing serious, don't worry", and the helplessness of being thousands of kilometres away. Meanwhile parents are left to deal with confusing apps, bank queues, hospital paperwork and a new scam every week, often alone.</p>
+  <p style="font-size:1.08rem;color:var(--muted)"><span data-c="brand"></span> is a simple promise: a patient, trustworthy person who shows up for your parents the way you would if you could, and tells you honestly how they're doing. We're not a hospital or a nursing agency. Think of us as the dependable family member nearby.</p>
 </div></section>
 
 <section class="alt"><div class="wrap">
@@ -146,8 +156,9 @@ footer{padding:30px 0;color:var(--muted);font-size:.9rem;text-align:center}
 
 <section class="alt"><div class="wrap">
   <h2>Questions</h2>
-  <details><summary>Who will visit my parents?</summary><p>Me, <span data-c="ownerName"></span>, personally. I'll do a video call with you first so you know exactly who's coming. Your parents can always call you during a visit.</p></details>
-  <details><summary>What if my parents need something urgently?</summary><p>They can WhatsApp or call me. In an emergency, call 112 or an ambulance first, then me. I'll coordinate and keep you updated.</p></details>
+  <details><summary>Who will visit my parents?</summary><p>A named <span data-c="brand"></span> care partner from your parents' city, the same person every time. You meet them on a video call before the first visit, so you know exactly who's coming. Your parents can always call you during a visit.</p></details>
+  <details><summary>Which cities do you cover?</summary><p>We're starting in select cities. Message us your parents' city and we'll confirm within a day.</p></details>
+  <details><summary>What if my parents need something urgently?</summary><p>They can WhatsApp or call us. In an emergency, call 112 or an ambulance first, then us. We'll coordinate and keep you updated.</p></details>
   <details><summary>Can I cancel any time?</summary><p>Yes. Plans are month to month with no lock-in.</p></details>
   <details><summary>Do you handle money for my parents?</summary><p>No. We guide them while they pay with their own phone or card. We never handle their cash, cards or passwords.</p></details>
 </div></section>
@@ -165,6 +176,7 @@ document.querySelectorAll('[data-c-href]').forEach(el => { el.textContent = CONF
 if (!CONFIG.email) document.getElementById('mailWrap').remove();
 document.querySelectorAll('[data-wa]').forEach(el => {
   const msg = el.dataset.wa.replace('[city]', CONFIG.city);
+  if (!CONFIG.hasWhatsapp) { el.href = '#'; el.onclick = e => { e.preventDefault(); alert(CONFIG.comingSoon); }; return; }
   el.href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(msg);
   el.target = '_blank'; el.rel = 'noopener';
 });

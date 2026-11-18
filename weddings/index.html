@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wedding Websites with WhatsApp RSVP</title>
 <meta name="description" content="Beautiful wedding websites for Indian weddings: every event, venue directions, dress codes, travel info and RSVP on WhatsApp. Ready in 48 hours.">
+<link rel="icon" href="logo-vivah.svg" type="image/svg+xml">
+<meta property="og:title" content="Vivah Pages | Every ritual, every guest, one beautiful link">
+<meta property="og:description" content="Wedding websites for Indian weddings: all events, venue directions, dress codes, travel info and RSVP on WhatsApp. Ready in 48 hours.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Great+Vibes&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="../config.js"></script>
@@ -67,13 +71,13 @@ footer{text-align:center;padding:30px;color:var(--muted);font-size:.9rem}
 </head>
 <body>
 <header><div class="wrap">
-  <span class="logo" data-c="weddingBrand"></span>
+  <span style="display:flex;align-items:center;gap:8px"><img src="logo-vivah.svg" alt="" width="32" height="32"><span class="logo" data-c="weddingBrand"></span></span>
   <a class="btn small" data-wa="Hi! I'd like a wedding website. Our wedding is on ">WhatsApp</a>
 </div></header>
 
 <main>
 <section class="hero"><div class="wrap">
-  <h1>One link for your whole wedding.</h1>
+  <h1 data-c="weddingTagline">One link for your whole wedding.</h1>
   <p>Every event, venue directions, dress codes, hotel & travel info, and <strong>RSVPs straight to your WhatsApp</strong>. Guests stop calling to ask "what time is the sangeet?" Ready in 48 hours.</p>
   <div class="cta">
     <a class="btn" data-wa="Hi! I'd like a wedding website. Our wedding is on ">Get yours in 48 hours</a>
@@ -104,6 +108,12 @@ footer{text-align:center;padding:30px;color:var(--muted);font-size:.9rem}
     <div class="f"><div class="i">✈️</div><h3>Travel & stay</h3><p>Airport, pickups, hotel check-in, weather and what to pack, in one place.</p></div>
     <div class="f"><div class="i">⏳</div><h3>Countdown & story</h3><p>Your love story and a live countdown, with no app and no login.</p></div>
   </div>
+</div></section>
+
+<section><div class="wrap" style="max-width:760px;text-align:center">
+  <div class="title"><h2>Why a wedding website?</h2></div>
+  <p style="font-size:1.08rem">An Indian wedding isn't one event. It's five, across three days, with hundreds of guests flying in from different cities. Today all of that information lives in scattered WhatsApp forwards, blurry PDFs and the bride's father's phone, which rings non-stop.</p>
+  <p style="font-size:1.08rem;color:var(--muted)"><span data-c="weddingBrand"></span> puts everything in one elegant link, so your family can enjoy the wedding instead of running a call centre.</p>
 </div></section>
 
 <section id="pricing"><div class="wrap">
@@ -148,12 +158,13 @@ footer{text-align:center;padding:30px;color:var(--muted);font-size:.9rem}
 </div></section>
 </main>
 
-<footer><span data-c="weddingBrand"></span> · Wedding websites from <span data-c="city"></span> for weddings anywhere</footer>
+<footer><span data-c="weddingBrand"></span> · Wedding websites for weddings anywhere in India</footer>
 <a class="wa" data-wa="Hi! I'd like a wedding website. Our wedding is on ">💬 WhatsApp</a>
 
 <script>
 document.querySelectorAll('[data-c]').forEach(el => el.textContent = CONFIG[el.dataset.c]);
 document.querySelectorAll('[data-wa]').forEach(el => {
+  if (!CONFIG.hasWhatsapp) { el.href = '#'; el.onclick = e => { e.preventDefault(); alert(CONFIG.comingSoon); }; return; }
   el.href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(el.dataset.wa);
   el.target = '_blank'; el.rel = 'noopener';
 });
